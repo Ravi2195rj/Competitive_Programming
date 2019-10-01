@@ -98,7 +98,7 @@ Approach
             return "";
         
         for(int i = 0; i < A; ++i)
-            Number[i] = to_string(i + 1); // store string as number. We can store it as single string.
+            Number[i] = to_string(i + 1); // store string as number. We can store it as single sttring.
                                           //because we can’t differentiate 12 as 1 and 2 or 12.
             
         return Permutation(Number, B - 1, Fact);
