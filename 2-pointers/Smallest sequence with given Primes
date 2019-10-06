@@ -1,0 +1,22 @@
+vector<int> Solution::solve(int A, int B, int C, int D) {
+    int i1=0,i2=0,i3=0;
+    vector<int> v;
+    v.push_back(1);
+    while(v.size()<=D){
+        int a=v[i1]*A, b=v[i2]*B, c=v[i3]*C;
+        if(a<=b && a<=c){
+            i1++;
+            if(v.back()!=a) v.push_back(a);
+        }
+        else if(b<=a && b<=c){
+            i2++;
+            if(v.back()!=b) v.push_back(b);
+        }
+        else if(c<=a && c<=b){
+            i3++;
+            if(v.back()!=c) v.push_back(c);
+        }
+    }
+    vector<int> ans(v.begin()+1,v.end());
+    return ans;
+}
