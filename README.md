@@ -6,3 +6,6 @@ All standard competitive programming questions with solutions from different cod
 * Backtracking
   * NQueens
   * Kth Permutation
+
+* Bit Manipulation
+  * Single Number
