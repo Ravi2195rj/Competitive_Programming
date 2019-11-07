@@ -1,0 +1,55 @@
+int Solution::solve(vector<int> &A, int B) {
+    int ans=0;
+    
+    for(int i=0,j=A.size()-1;i<j;){
+        // cout<<i<<" "<<j<<endl;
+        int sum=A[i]+A[j];
+        if(sum==B){
+            // int x1=0,x2=0;
+            // int z=i;
+            // bool chain=false;
+            // // cout<<"1"<<endl;
+            // while(A[z]==A[i]){
+            //     if(z>=j){
+            //         chain=true;
+            //         break;
+            //     }
+            //     z++;
+            //     x1++;
+            // }
+            // // cout<<"2 "<<z<<endl;
+            // if(!chain){
+            //     i=z;
+            //     z=j;
+            //     while(A[z]==A[j]){
+            //         z--;
+            //         x2++;
+            //     }
+            //     j=z;
+            //     ans+=x1*x2;
+            // }
+            // else{
+            //     // cout<<"========================"<<endl;
+            //     z=i;
+            //     int l=0;
+            //     while(A[z]==A[i]){
+            //         l++;
+            //         z++;
+            //     }
+            //     // cout<<l<<endl;
+            //     ans+=l*(l-1)/2;
+            //     break;
+            // }
+            ans++;
+            i++;j--;
+        }
+        else if(sum<B){
+            i++;
+        }
+        else{
+            j--;
+        }
+        // cout<<ans<<endl;
+    }
+    return ans;
+}
