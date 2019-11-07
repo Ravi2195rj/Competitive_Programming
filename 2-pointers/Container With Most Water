@@ -1,0 +1,13 @@
+int Solution::maxArea(vector<int> &A) {
+    int n=A.size();
+    if(n==1)    return 0;
+    int i=0,j=n-1;
+    int ans=INT32_MIN;
+    while(i<j){
+        int area=(j-i)*min(A[i],A[j]);
+        ans=max(area,ans);
+        if(A[i]<A[j])   i++;
+        else j--;
+    }
+    return ans;
+}
